@@ -16,6 +16,7 @@ void accueil() {
   textSize(0.0625*width);// texte en tres gros
   text("Le Système Solaire", 0, height*0.2, width, height*0.2); // titre
   textSize(20);// on remet la taille par defaut
-  if ((mousePressed == true) && (mouseX > width*0.05) && (mouseX < width*0.05+width*0.4) && (mouseY < height*0.7+height*0.08) && (mouseY > height*0.7)) page = "systeme";
-  if ((mousePressed == true) && (mouseX > width*0.55) && (mouseX < width*0.6+width*0.4) && (mouseY < height*0.7+height*0.08) && (mouseY > height*0.7)) page = "quizz";
+  textAlign(LEFT);
+  if ((mousePressed == true) && (mouseX > width*0.05) && (mouseX < (width*0.05)+width*0.4) && (mouseY < height*0.75+height*0.08) && (mouseY > height*0.75)) page = "systeme";
+  if ((mousePressed == true) && (mouseX > width*0.55) && (mouseX < width*0.6+width*0.4) && (mouseY < height*0.75+height*0.08) && (mouseY > height*0.75)) page = "quizz";
 }
