@@ -20,12 +20,13 @@ String page;
 void setup() 
 {
   //size(400, 400);
-    fullScreen();
-    println(width + " " + height);
-    background(20,20,40);
+  fullScreen();
+  println(width + " " + height);
+  background(20,20,40);
   noSmooth();
   imageMode(CENTER);
   ellipseMode(CENTER);
+  
   
   // pour faire plus propre
   chargement_image(); ////////// !!!!!!
@@ -51,6 +52,7 @@ void draw() {
       quizz();
       break;
   }
+  affiche_back();
 }
 
 

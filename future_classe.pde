@@ -91,7 +91,7 @@ void systeme() {
   fill(15,15,30);
   rect(width*0.755,height*0.9,width*0.235,height*0.08,5);
   fill(250);
-  textSize((30*width)/width);
+  textSize(0.022*width);
   text("accès au quizz >>",width*0.775,height*0.95);
   textSize(20);
   if ((mousePressed == true) && (mouseX > width*0.755) && (mouseX < width*0.755+width*0.235) && (mouseY < height*0.9+height*0.08) && (mouseY > height*0.9)) page = "quizz";
