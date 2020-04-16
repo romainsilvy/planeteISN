@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quizz>
+    <question id="0" quest="Combien il y a-t-il de planètes dans le système solaire?" just="2">
+        <reponse r="45"/>
+        <reponse r="8"/>
+        <reponse r="C’est quoi le système solaire?"/>
+        <reponse r="9"/>
+    </question>
+    <question id="1" quest="Quelle est la planète la plus proche du soleil?" just="3">
+        <reponse r="Icare"/>
+        <reponse r="Venus"/>
+        <reponse r="Mercure"/>
+        <reponse r="Terre"/>
+    </question>
+    <question id="2" quest="Quelle est la planète la plus éloignée du soleil?" just="2">
+        <reponse r="Terre"/>
+        <reponse r="Neptune"/>
+        <reponse r="Pluton"/>
+        <reponse r="Jupiter"/>
+    </question>
+    <question id="3" quest="La plus haute montagne sur une planète du système solaire se trouve sur quelle planète?" just="3">
+        <reponse r="Terre"/>
+        <reponse r="Uranus"/>
+        <reponse r="Mars"/>
+        <reponse r="Neptune"/>
+    </question>
+    <question id="4" quest="Combien il y a-t-il de système solaire?" just="3">
+        <reponse r="0"/>
+        <reponse r="Beaucoup"/>
+        <reponse r="1 seul et unique"/>
+        <reponse r="17"/>
+    </question>
+    <question id="5" quest="Quelle est la plus grosse planète du système solaire?" just="2">
+        <reponse r="Mon cerveaux"/>
+        <reponse r="Jupiter"/>
+        <reponse r="Mercure"/>
+        <reponse r="Mars"/>
+    </question>
+    <question id="6" quest="Quelle est la plus petite planète du système solaire?" just="1">
+        <reponse r="Mercure"/>
+        <reponse r="Jupiter"/>
+        <reponse r="Pluton"/>
+        <reponse r="Uranus"/>
+    </question>
+    <question id="7" quest="Dans quel ordre sont les planètes en partant du soleil?" just="4">
+        <reponse r="Neptune, Uranus, Saturne, Jupiter, Mars, Terre, Vénus et Mercure"/>
+        <reponse r="Mercure, Neptune, Vénus, Uranus, Terre, Saturne , Mars et Jupiter"/>
+        <reponse r="Terre, Neptune, Mars, Jupiter, Uranus, Mercure, Saturne et Vénus"/>
+        <reponse r="Mercure, Vénus, la Terre, Mars, Jupiter, Saturne, Uranus et Neptune"/>
+    </question>
+    <question id="8" quest="Pour nommé les Astres du système solaire, on s’est souvent inspirés?" just="3">
+        <reponse r="De marque de téléphone"/>
+        <reponse r="De plantes"/>
+        <reponse r="De divinités"/>
+        <reponse r="D’animaux"/>
+    </question>
+    <question id="9" quest="Quelle phrase permet de mémoriser facilement l’ordre des planètes dans le système solaire?" just="2">
+        <reponse r="Il ne faut pas pousser mémé dans les orties."/>
+        <reponse r="Mes vieilles tortues marchent justement sur un ninja."/>
+        <reponse r="Qui vole un œuf, vole un bœuf."/>
+        <reponse r="On ne mélange pas les torchons avec les serviettes."/>
+    </question>
+    <question id="10" quest="Quelle est la température à la surface du soleil" just="1">
+        <reponse r="5750K"/>
+        <reponse r="-5750K"/>
+        <reponse r="2K"/>
+        <reponse r="On n’a pas réussi à prendre la température du soleil, le thermomètre à fondu."/>
+    </question>
+    <question id="11" quest="A quel jour de la semaine Mercure a-t-elle laissé son nom?" just="4">
+        <reponse r="Mardi"/>
+        <reponse r="Dimanche"/>
+        <reponse r="Jeudi"/>
+        <reponse r="Mercredi"/>
+    </question>
+    <question id="12" quest="Quelle est la particularité de Vénus?" just="2">
+        <reponse r="Elle habite des extraterrestres"/>
+        <reponse r="C’est la seule planète du système solaire ayant une période de rotation supérieure a sa période de révolution"/>
+        <reponse r="C’est la planète la plus grande du système solaire"/>
+        <reponse r="C’est la seule planète a avoir un nom inspiré d’une mythologie"/>
+    </question>
+    <question id="13" quest="Quel est le pourcentage d’eau sur la Terre?" just="1">
+        <reponse r="71%"/>
+        <reponse r="1%"/>
+        <reponse r="99%"/>
+        <reponse r="50%"/>
+    </question>
+    <question id="14" quest="Sur Mars il y a:" just="2">
+        <reponse r="Le plus grand cratère"/>
+        <reponse r="La plus grande montagne"/>
+        <reponse r="La plus petite montagne"/>
+        <reponse r="Le plus petit cratère"/>
+    </question>
+    <question id="15" quest="Quelle est la particularité de Jupiter?" just="2">
+        <reponse r="C’est la plus petite planète du système solaire"/>
+        <reponse r="Elle a le champ magnétique le plus intense du système solaire"/>
+        <reponse r="Ses 16 satellites sont nommés après les personnages de la saga “Star Wars”"/>
+        <reponse r="Elle tourne sur elle-même dans le sens des aiguilles d’une montre "/>
+    </question>
+    <question id="16" quest="Comment peut-on apercevoir Saturne?" just="3">
+        <reponse r="En soir de pleine Lune seulement"/>
+        <reponse r="Avec des lunettes spéciales"/>
+        <reponse r="A l’œil nu"/>
+        <reponse r="Seulement avec un télescope "/>
+    </question>
+    <question id="17" quest="Uranus est la planète:" just="1">
+        <reponse r="la plus froide"/>
+        <reponse r="la plus éloigné du soleil dans le système solaire"/>
+        <reponse r="la plus drôle "/>
+        <reponse r="la plus grande"/>
+    </question>
+    <question id="18" quest="Quelle particularité sur Neptune est vrai?" just="1">
+        <reponse r="Toutes"/>
+        <reponse r="1 an sur Neptune dure 165 ans sur la Terre"/>
+        <reponse r="L’origine de la couleur bleue de Neptune n’est toujours pas expliqué"/>
+        <reponse r="C’est la planète la plus éloignée du soleil dans le système solaire "/>
+    </question>
+</quizz>
