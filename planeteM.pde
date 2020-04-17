@@ -14,7 +14,8 @@ float tetaMe = 0, tetaVe = 0, tetaTe = 0, tetaMa = 0, tetaJu = 0, tetaSa = 0, te
 PImage fond, soleil, mercure, venus, terre, mars, jupiter, saturne, uranus, neptune;
 float t;
 String page;
-Question_quizz[] les_questions;
+Quizz[] les_questions;
+int point = 0, nb_page = 0;
 int etat_quizz = 1; // pour savoir si on est a la page d'acceuil ou au milieu ou a la fin
 int current_question = 0; // la question on l'on est dans le quizz
 
@@ -24,27 +25,19 @@ void setup()
 {
   //size(400, 400);
   fullScreen();
-  //println(width + " " + height);
-  background(20,20,40);
-  //noSmooth();
   imageMode(CENTER);
   ellipseMode(CENTER);
  
   load_quizz();
-  
-  
-  // pour faire plus propre
-  chargement_image(); ////////// !!!!!!
-  
-  
-  mise_echelle(); ////////// !!!!!!!
-  
-  
+
+  chargement_image();
+
+  mise_echelle();
+
   page = "accueil"; // au demarrage on va a l'accueil
 } 
 
 void draw() {
-  
   // on test la variable page pour savoir ou l'on est
   switch(page){
     case "accueil": // si on doit etre a l'accueil on appel la fonction acueil
@@ -61,9 +54,6 @@ void draw() {
 }
 
 
-
-
- 
 
 
 

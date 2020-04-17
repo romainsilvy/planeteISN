@@ -1,5 +1,6 @@
 
 void affiche_back(){
+  textAlign(LEFT, BASELINE); // pour y mettre au centre de la boite
   // on commence par afficher le bouton en haut a gauche
   fill(30,30,30);
   rect(0.01*width, 0.01*height, 0.05*width, 0.03*height);
