@@ -24,9 +24,9 @@ void setup()
 {
   //size(400, 400);
   fullScreen();
-  println(width + " " + height);
+  //println(width + " " + height);
   background(20,20,40);
-  noSmooth();
+  //noSmooth();
   imageMode(CENTER);
   ellipseMode(CENTER);
  

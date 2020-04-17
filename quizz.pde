@@ -43,7 +43,9 @@ void load_quizz(){
 
 
 void in_quizz(){
-  for(int i = 0; i < 10; i++){
+  if(les_questions[current_question].affiche()){
+    // la il marque un point
+    // donc on change le question qui est afficher
     int rand = int(random(0, 10));
     les_questions[rand].affiche();
   }
@@ -58,7 +60,9 @@ class Question_quizz{
    
   }
   
-  void affiche(){
+  boolean affiche(){
     text("affichage de la question", width*0.4, height*0.5);
+    if ((mousePressed == true) && (mouseX > width*0.05) && (mouseX < (width*0.05)+width*0.4) && (mouseY < height*0.75+height*0.08) && (mouseY > height*0.75)) return true;
+    return false;
   }
 }
