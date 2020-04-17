@@ -14,6 +14,7 @@ float tetaMe = 0, tetaVe = 0, tetaTe = 0, tetaMa = 0, tetaJu = 0, tetaSa = 0, te
 PImage fond, soleil, mercure, venus, terre, mars, jupiter, saturne, uranus, neptune;
 float t;
 String page;
+Question_quizz[] les_questions;
 
 //float Me = 16, Ve = 21, Te = 27, Ma = 33, Ju = 45, Sa = 56, Ur = 70, Ne = 75;
 
@@ -26,6 +27,8 @@ void setup()
   noSmooth();
   imageMode(CENTER);
   ellipseMode(CENTER);
+ 
+  load_quizz();
   
   
   // pour faire plus propre
