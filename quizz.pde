@@ -7,6 +7,21 @@ void quizz() {
   fill(250);
   textSize(0.025*width);
   text("Le Quizz", width*0.3, height*0.2);
+  switch(etat_quizz){
+    case 1:
+      text("presentation du quizz TODO", width*0.4, height*0.5);
+      if(mousePressed){ etat_quizz = 2;}
+      break;
+    case 2:
+      in_quizz();
+      if(mousePressed){ etat_quizz = 3;}
+      break;
+    case 3:
+      fin_quizz();
+      if(mousePressed){ etat_quizz = 1;}
+      break;
+  }
+ 
 }
 
 
@@ -27,8 +42,23 @@ void load_quizz(){
 }
 
 
+void in_quizz(){
+  for(int i = 0; i < 10; i++){
+    int rand = int(random(0, 10));
+    les_questions[rand].affiche();
+  }
+}
+
+void fin_quizz(){
+   text("vous avez X points ", width*0.4, height*0.5);
+}
+
 class Question_quizz{
   Question_quizz(String question, String[] reponses, int check){
+   
+  }
   
+  void affiche(){
+    text("affichage de la question", width*0.4, height*0.5);
   }
 }

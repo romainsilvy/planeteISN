@@ -15,6 +15,8 @@ PImage fond, soleil, mercure, venus, terre, mars, jupiter, saturne, uranus, nept
 float t;
 String page;
 Question_quizz[] les_questions;
+int etat_quizz = 1; // pour savoir si on est a la page d'acceuil ou au milieu ou a la fin
+int current_question = 0; // la question on l'on est dans le quizz
 
 //float Me = 16, Ve = 21, Te = 27, Ma = 33, Ju = 45, Sa = 56, Ur = 70, Ne = 75;
 
