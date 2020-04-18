@@ -7,8 +7,9 @@ void accueil() {
   rect(width*0.55, height*0.75, width*0.4, height*0.08, height*0.008);
   fill(250);
   textAlign(CENTER, CENTER); // pour y mettre au centre de la boite
-  text("accès au système >>",0, height*0.75, width*0.5, height*0.08); // on marque les acces
-  text("accès au quizz >>", width*0.5, height*0.75, width*0.5, height*0.08);
+  noStroke();
+  text("accès au système >>",0, height*0.745, width*0.5, height*0.08); // on marque les acces
+  text("accès au quizz >>", width*0.5, height*0.745, width*0.5, height*0.08);
 
   text("Ce programme vous propose une reconstitution sans échelle de notre Système Solaire, ainsi qu'un quizz pour tester vos connaissances.",0,height*0.3, width,height*0.4);
   textSize(0.062*width);// texte en tres gros
