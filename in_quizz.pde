@@ -30,7 +30,7 @@ class Quizz {           // début class Quizz
 
     //rectangle de fond
     fill(30, 30, 30);
-    rect(width*0.5, height*0.32, width*0.81, height*0.07);  //question
+    rect(width*0.5, height*0.25, width*0.81, height*0.07);  //question
     rect(width*0.5, height*0.42, width*0.81, height*0.07);  //r1
     rect(width*0.5, height*0.52, width*0.81, height*0.07);  //r2
     rect(width*0.5, height*0.62, width*0.81, height*0.07);  //r3
@@ -39,9 +39,10 @@ class Quizz {           // début class Quizz
     //texte dans rectangle
     textSize(0.020*width);
     fill(255);
-    text(q, width*0.5, height*0.33, width*0.8, height*0.07); // la question
+    textAlign(CENTER, CENTER);
+    text(q, width*0.5, height*0.245, width*0.8, height*0.07); // la question
     for(int i = 0; i < 4; i++){
-      text(r[i], width*0.5, height*(0.43 + (i * 0.10)), width*0.8, height*0.07); // les reponses
+      text(r[i], width*0.5, height*(0.42 + (i * 0.10)), width*0.8, height*0.07); // les reponses
     }
 
     //case a cocher interactive
