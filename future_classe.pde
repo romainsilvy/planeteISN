@@ -1,9 +1,9 @@
 /* 
-* contenue:
-* calculPosition(): met a jour les coordonnees des planetes
-* system(): tout la partie pour afficher le system solaire
+* contenu:
+* calculPosition(): met à jour les coordonnées des planètes
+* system(): toute la partie pour afficher le système solaire
 * chargement_image(): charge les images dans les variables
-* mise_echelle(): calcul les positions/distance pour que ca rentre dans l'encran
+* mise_echelle(): calcul les positions/distance pour que ça rentre dans l'écran
 */
 
 

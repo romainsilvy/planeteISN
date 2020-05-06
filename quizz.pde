@@ -1,21 +1,21 @@
 void load_quizz(){
-  XML file_quizz = loadXML("data_quizz.xml"); // on charge le fichier ou sont toutes les donnees des questions
-  XML[] all_questions = file_quizz.getChildren("question"); // on transforme ce fichier en tableau d'enfant XML, donc c'est toutes les questions avec les reponses
+  XML file_quizz = loadXML("data_quizz.xml"); // on charge le fichier XML où sont toutes les données des questions
+  XML[] all_questions = file_quizz.getChildren("question"); // on transforme ce fichier en tableau d'enfant XML, ce tableau contient donc toutes les questions avec leurs réponses
    les_questions = new Quizz[all_questions.length];
 
-  for(int i = 0;i < all_questions.length ;i++){ // pour tout les questions 
-    String question = all_questions[i].getString("quest"); // on recupere la questions
-    int check = all_questions[i].getInt("just"); //           on recupere le check pour savoir la quelle est juste
-    XML[] reponse_children = all_questions[i].getChildren("reponse");// pour recupere les reponse possible on prend tout les enfants
-    String[] reponse = new String[4]; //                             on cree un tableau de String
-    for(int j = 0; j < 4; j++){ //                                   pour tout les reponse possible
-      reponse[j] = reponse_children[j].getString("r");//                 on met une reponse dans chaque case
+  for(int i = 0;i < all_questions.length ;i++){ // pour toutes les questions 
+    String question = all_questions[i].getString("quest"); // on récupère la question
+    int check = all_questions[i].getInt("just"); //           on récupère le check pour savoir quelle réponse est juste
+    XML[] reponse_children = all_questions[i].getChildren("reponse");// pour récupérer les réponses possibles, on prend tous les enfants
+    String[] reponse = new String[4]; //                             on crée un tableau de String
+    for(int j = 0; j < 4; j++){ //                                   pour toutes les réponses possibles
+      reponse[j] = reponse_children[j].getString("r");//                 on met une réponse dans chaque case
     }
-    les_questions[i] = new Quizz(question, reponse, check);  // on remplie le tableaux de notre objet questions
+    les_questions[i] = new Quizz(question, reponse, check);  // on remplit le tableau de notre objet question
   }
 }
 
-void quizz() { // juste la porte d'enter vers les differentes page du quizz
+void quizz() { // juste la porte d'entrée (d'introduction) vers les differentes pages du quizz
   background(35);
   image(fond, 512, 384);
   switch(etat_quizz) {
@@ -48,7 +48,7 @@ void intro_quizz() {
   fill(30, 30, 30);
   rect(width*0.5, height*0.57, width*0.81, height*0.55);
   fill(255);
-  text("Bienvenue dans le quizz sur le systeme solaire ! ici vous allez pouvoir tester vos connaisances sur le systeme solaire et les planetes. \nIl est fortement conseillé de regarder l'annimation sur le systeme solaire avant d'entrer dans le quizz car une fois que vous serez dedans, aucun retour en arriere ne sera possible ! \n\n ATTENTION ! Une seule reponse sera accéptée par question.", width*0.5, height*0.7, width*0.8, height*0.8);
+  text("Bienvenue dans le quizz sur le Système Solaire ! Ici vous allez pouvoir tester vos connaisances sur le Système Solaire et ses planètes. \n Il est fortement conseillé de consulter attentivement l'animation sur le Système Solaire avant de commencer le quizz, car une fois le quizz commencé, aucun retour en arrière ne sera possible ! \n\n ATTENTION ! Il n'y a qu'une seule réponse juste par question.", width*0.5, height*0.7, width*0.8, height*0.8);
   rectMode(CORNER);
 }
 
@@ -60,6 +60,6 @@ void fin_quizz() {
   fill(30, 30, 30);
   rect(width*0.5, height*0.57, width*0.81, height*0.55);
   fill(255);
-  text("Felicitations ! Vous avez réussi le quizz et vous avez obtenu un total de NOMBRE DE POINTS. \n Vous pouvez recommencer si vous voulez améliorer votre score mais pensez d'abord a aller voir l'animation du systeme solaire.", width*0.5, height*0.7, width*0.8, height*0.8);
+  text("Félicitations ! Vous avez réussi le quizz et avez obtenu un score de NOMBRE DE POINTS. \n Vous pouvez recommencer le quizz si vous souhaitez améliorer votre score ou simplement pour vous testez sur d'autres questions, mais pensez d'abord à aller voir l'animation sur le Système Solaire.", width*0.5, height*0.7, width*0.8, height*0.8);
   rectMode(CORNER);
 }
