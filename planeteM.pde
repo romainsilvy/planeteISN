@@ -14,10 +14,11 @@ float tetaMe = 0, tetaVe = 0, tetaTe = 0, tetaMa = 0, tetaJu = 0, tetaSa = 0, te
 PImage fond, soleil, mercure, venus, terre, mars, jupiter, saturne, uranus, neptune;
 float t;
 String page;
+String intro_s = "    Ceci est une représentation simplifiée de notre Système Solaire. Aucune distance n'est à l'échelle, de même pour les tailles des planètes. \n Pour obtenir des informations sur les planètes, passez simplement votre souris dessus ou sur leurs orbites. N’hésitez pas à tester vos connaissances avec le quizz. \n\n Bonne découverte !";
 Quizz[] les_questions;
 int point = 0, nb_page = 0;
-int etat_quizz = 1; // pour savoir si on est a la page d'acceuil ou au milieu ou a la fin
-int current_question = 0; // la question on l'on est dans le quizz
+int etat_quizz = 1; // pour savoir si on est à la page d'accueil, au milieu ou à la fin
+int current_question = 0; // le numéro de la question actuelle du quizz
 
 //float Me = 16, Ve = 21, Te = 27, Ma = 33, Ju = 45, Sa = 56, Ur = 70, Ne = 75;
 
@@ -34,13 +35,13 @@ void setup()
 
   mise_echelle();
 
-  page = "accueil"; // au demarrage on va a l'accueil
+  page = "accueil"; // au démarrage on va à l'accueil
 } 
 
 void draw() {
-  // on test la variable page pour savoir ou l'on est
+  // on teste la variable page pour savoir où l'on est
   switch(page){
-    case "accueil": // si on doit etre a l'accueil on appel la fonction acueil
+    case "accueil": // si on doit être à l'accueil on appelle la fonction accueil
       accueil();
       break;
     case "systeme": // ...
@@ -52,8 +53,6 @@ void draw() {
   }
   affiche_back();
 }
-
-
 
 
 

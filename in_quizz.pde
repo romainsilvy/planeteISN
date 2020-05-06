@@ -42,37 +42,37 @@ class Quizz {           // début class Quizz
     textAlign(CENTER, CENTER);
     text(q, width*0.5, height*0.245, width*0.8, height*0.07); // la question
     for(int i = 0; i < 4; i++){
-      text(r[i], width*0.5, height*(0.42 + (i * 0.10)), width*0.8, height*0.07); // les reponses
+      text(r[i], width*0.5, height*(0.42 + (i * 0.10)), width*0.8, height*0.07); // les réponses
     }
 
-    //case a cocher interactive
+    //case à cocher interactive
     rectMode(CORNER);
     for(int i = 0; i < 4; i++){
-      if(rd == i + 1){ // si c'est la reponse selectionne
+      if(rd == i + 1){ // si c'est la réponse sélectionnée
         fill(255, 0, 0); // en rouge
       }else{
         fill(255); // sinon en blanc
       }
       rect(width*0.05, height*(0.4075+ (i * 0.10)), height*0.025, height*0.025); // le rectangle
     }
-    testReponse(); // test si on clique sur les petites cases et les mets a jour
+    testReponse(); // teste si on clique sur les petites cases et les mets a jour
     
     
-    // ________________ BOUTTON SUIVANT_________________//
+    // ________________ BOUTON SUIVANT_________________//
     fill(30, 30, 30);
     rect(width*0.8, height*0.85, width*0.105, height*0.07);
     fill(250);
     textAlign(LEFT, BASELINE);
     text("suivant", width*0.81, height*0.9);  
-    if ((mousePressed == true) && (mouseX > width*0.8) && (mouseX < width*0.905) && (mouseY < height*(0.85 + 0.07)) && (mouseY > height*0.85) && (rd != 0)){ // test du clique sur le bouton suivant
-      nb_page = nb_page +1; // on ajout a 1 au nombre de page de quizz visiter
+    if ((mousePressed == true) && (mouseX > width*0.8) && (mouseX < width*0.905) && (mouseY < height*(0.85 + 0.07)) && (mouseY > height*0.85) && (rd != 0)){ // test du clic sur le bouton suivant
+      nb_page = nb_page +1; // on ajoute 1 au nombre de pages de quizz visitées
       return true; // on renvoie true pour afficher une nouvelle question du quizz
     }
     
-    return false; // si on appuie pas en revoie false qui n'active rien
+    return false; // si on n'appuie pas en revoie false qui n'active rien
   }
   
-  void testReponse(){ // on test si on clique et ou on clique pour voir si on cique sur les carre de selection de question
+  void testReponse(){ // on teste si on clique sur un carré pour sélectionner une réponse
     if (mousePressed == true) {
       for(int i = 0; i < 4; i++){ // pour toutes les cases
         if((mouseX > width*0.05) && (mouseX < width*0.05 + height*0.025) && (mouseY > height*(0.4075+ ((i - 1) * 0.10))) && (mouseY > height*(0.4075+ ((i - 1) * 0.10)) + height*0.025)){

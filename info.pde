@@ -30,7 +30,7 @@ void informations()
     text("assez ordinaire, bien qu’il soit en fait plus brillant que 85 % des",t,480);
     text("étoiles de la Galaxie, qui sont en majorité des naines rouges. ",t,500);
   }
-  if (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS)) <= (eMe/2+10)*(eMe/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eMe/2-10)*(eMe/2-10)) {
+  else if (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS)) <= (eMe/2+10)*(eMe/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eMe/2-10)*(eMe/2-10)) {
     text("Mercure", xMe, yMe);
     fill( 187, 187, 187);
     textSize(35);
@@ -60,7 +60,7 @@ void informations()
     text("                -Mercure laissa également son nom au troisième jour de",t,500);
     text("la semaine, mercredi (« Mercurii dies »).",t,520);
   }
-  if (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS)) <= (eVe/2+10)*(eVe/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eVe/2-10)*(eVe/2-10)) {
+  else if (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS)) <= (eVe/2+10)*(eVe/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eVe/2-10)*(eVe/2-10)) {
     text("Vénus", xVe, yVe);
     fill(250, 215, 160);
     textSize(35);
@@ -96,7 +96,7 @@ void informations()
     text("troupeaux dans les temps anciens en tenaient compte pour aller",t,620);
     text("dans les pâturages ou en revenir.",t,640);
   }
-  if (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS)) <= (eTe/2+10)*(eTe/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eTe/2-10)*(eTe/2-10)) {
+  else if (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS)) <= (eTe/2+10)*(eTe/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eTe/2-10)*(eTe/2-10)) {
     text("Terre", xTe, yTe);
     fill(111, 255, 82);
     textSize(35);
@@ -116,7 +116,7 @@ void informations()
     text("Lune, située à environ 380 000 kilomètres de sa surface. ",t,300);
     text("Période de révolution : 1 année ",t,320);
     text("Période de rotation : 24 heures ",t,340);
-  text("Température moyenne de surface:15 °C entre −93,2 °C et 56,7 °C.",t,360);
+    text("Température moyenne de surface:15 °C entre −93,2 °C et 56,7 °C.",t,360);
     text("Fun facts: - environ 71 % de sa surface est couverte d'océans d'eau",t,380);
     text("salée, d’où son surnom de “planète bleue.",t,400);
     text("                 - La Lune s'éloigne de la Terre à un rythme d'environ",t,420);
@@ -129,7 +129,7 @@ void informations()
 
 
   }
-  if (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS)) <= (eMa/2+10)*(eMa/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eMa/2-10)*(eMa/2-10)) {
+  else if (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS)) <= (eMa/2+10)*(eMa/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eMa/2-10)*(eMa/2-10)) {
     text("Mars", xMa, yMa);
     fill(211, 111, 58);
     textSize(35);
@@ -155,7 +155,7 @@ void informations()
     text(" romain de la guerre. ",t,420);
 
   }
-  if (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS)) <= (eJu/2+10)*(eJu/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eJu/2-10)*(eJu/2-10)) {
+  else if (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS)) <= (eJu/2+10)*(eJu/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eJu/2-10)*(eJu/2-10)) {
     text("Jupiter", xJu, yJu);
     fill(214, 116, 43);
     textSize(35);
@@ -189,7 +189,7 @@ void informations()
     text("et les vents soufflent à plus de 400 km/h sur ses bords.",t,580);
 
   }
-  if (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS)) <= (eSa/2+10)*(eSa/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eSa/2-10)*(eSa/2-10)) {
+  else if (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS)) <= (eSa/2+10)*(eSa/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eSa/2-10)*(eSa/2-10)) {
     fill(250);
     text("Saturne", xSa, ySa);
     fill( 238, 225, 175 );
@@ -218,7 +218,7 @@ void informations()
     text("lunes (150 et plusieurs autres petits satellites).",t,460);
 
   }
-  if (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS)) <= (eUr/2+10)*(eUr/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eUr/2-10)*(eUr/2-10)) {
+  else if (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS)) <= (eUr/2+10)*(eUr/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eUr/2-10)*(eUr/2-10)) {
     text("Uranus", xUr, yUr);
     fill( 161, 232, 227 );
     textSize(35);
@@ -248,7 +248,7 @@ void informations()
     text("« Georgium Sidus » (étoile de George), ou « Georgian Planet » (planète",t,500);
     text("Géorgienne) en l'honneur de son mécène, le roi George III",t,520);
   }
-  if (((mouseX-xS+200)*(mouseX-xS+200)) + ((mouseY-yS)*(mouseY-yS)) <= (eNe/2+10)*(eNe/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eNe/2-10)*(eNe/2-10)||((mouseX-xS-200)*(mouseX-xS-200)) + ((mouseY-yS)*(mouseY-yS)) <= (eNe/2+10)*(eNe/2+10) && (((mouseX-xS)*(mouseX-xS)) + ((mouseY-yS)*(mouseY-yS))) >= (eNe/2-10)*(eNe/2-10)) {
+  else if (((mouseX-xS+100)*(mouseX-xS+100)) + ((mouseY-yS)*(mouseY-yS)) <= (eNe/2+10)*(eNe/2+10) && (((mouseX-xS+90)*(mouseX-xS+90)) + ((mouseY-yS)*(mouseY-yS))) >= (eNe/2-10)*(eNe/2-10)||((mouseX-xS-100)*(mouseX-xS-100)) + ((mouseY-yS)*(mouseY-yS)) <= (eNe/2+10)*(eNe/2+10) && (((mouseX-xS-90)*(mouseX-xS-90)) + ((mouseY-yS)*(mouseY-yS))) >= (eNe/2-10)*(eNe/2-10)) {
     text("Neptune", xNe, yNe);
     fill(54, 113, 223 );
     textSize(35);
@@ -274,5 +274,12 @@ void informations()
     text("calcul à partir de la trajectoire et des caractéristiques d'Uranus.",t,420);
     text("La planète n'est jamais observable à l'œil nu contrairement aux sept",t,440);
     text("autres planètes du Système Solaire.",t,460);
+  }
+  else {
+    fill(223);
+    textSize(35);
+    text("Le Système Solaire:", t+20, 55);
+    textSize(15);
+    text(intro_s, t,80);
   }
 }
