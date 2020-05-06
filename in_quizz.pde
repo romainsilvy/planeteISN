@@ -21,8 +21,8 @@ class Quizz {           // début class Quizz
   Quizz (String question, String[] reponse, int check){
     q = question;
     r = reponse;
-    c = check;
-    rd = 0;
+    c = check; // le numero de la reponse juste
+    rd = 0; // reponse donne par l'utilisateur
   }
   boolean affiche(){
     textAlign(LEFT, CENTER);
@@ -66,6 +66,9 @@ class Quizz {           // début class Quizz
     text("suivant", width*0.81, height*0.9);  
     if ((mousePressed == true) && (mouseX > width*0.8) && (mouseX < width*0.905) && (mouseY < height*(0.85 + 0.07)) && (mouseY > height*0.85) && (rd != 0)){ // test du clic sur le bouton suivant
       nb_page = nb_page +1; // on ajoute 1 au nombre de pages de quizz visitées
+      if(rd == c){
+        point ++; // si la reponse est juste on augmente les points
+      }
       return true; // on renvoie true pour afficher une nouvelle question du quizz
     }
     

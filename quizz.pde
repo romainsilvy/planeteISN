@@ -60,6 +60,6 @@ void fin_quizz() {
   fill(30, 30, 30);
   rect(width*0.5, height*0.57, width*0.81, height*0.55);
   fill(255);
-  text("Félicitations ! Vous avez réussi le quizz et avez obtenu un score de NOMBRE DE POINTS. \n Vous pouvez recommencer le quizz si vous souhaitez améliorer votre score ou simplement pour vous testez sur d'autres questions, mais pensez d'abord à aller voir l'animation sur le Système Solaire.", width*0.5, height*0.7, width*0.8, height*0.8);
+  text("Félicitations ! Vous avez réussi le quizz et avez obtenu un score de " + point + " points \nVous pouvez recommencer le quizz si vous souhaitez améliorer votre score ou simplement pour vous testez sur d'autres questions, mais pensez d'abord à aller voir l'animation sur le Système Solaire.", width*0.5, height*0.7, width*0.8, height*0.8);
   rectMode(CORNER);
 }

@@ -18,4 +18,9 @@ void accueil() {
   textAlign(LEFT);
   if ((mousePressed == true) && (mouseX > width*0.05) && (mouseX < (width*0.05)+width*0.4) && (mouseY < height*0.75+height*0.08) && (mouseY > height*0.75)) page = "systeme";
   if ((mousePressed == true) && (mouseX > width*0.55) && (mouseX < width*0.6+width*0.4) && (mouseY < height*0.75+height*0.08) && (mouseY > height*0.75)) page = "quizz";
+  
+  // on renitialise les points et la page du quizz quand on va sur l'acceil
+  point = 0;
+  nb_page = 0;
+  etat_quizz = 1;
 }
