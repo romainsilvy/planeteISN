@@ -64,7 +64,7 @@
         <reponse r="5750K"/>
         <reponse r="-5750K"/>
         <reponse r="2K"/>
-        <reponse r="On n’a pas réussi à prendre la température du soleil, le thermomètre à fondu."/>
+        <reponse r="On n’a pas réussi à prendre la température du Soleil, le thermomètre a fondu."/>
     </question>
     <question id="11" quest="À quel jour de la semaine Mercure a-t-elle donnée son nom?" just="4">
         <reponse r="Mardi"/>
@@ -75,7 +75,7 @@
     <question id="12" quest="Quelle est la particularité de Vénus?" just="2">
         <reponse r="Elle est habitée par des extraterrestres"/>
         <reponse r="C’est la seule planète du Système Solaire ayant une période de rotation supérieure à sa période de révolution"/>
-        <reponse r="C’est la planète la plus grande du Système Solaire"/>
+        <reponse r="C’est la plus grande planète du Système Solaire"/>
         <reponse r="C’est la seule planète à avoir un nom inspiré d’une mythologie"/>
     </question>
     <question id="13" quest="Quel est le pourcentage d’eau sur la Terre?" just="1">
@@ -104,7 +104,7 @@
     </question>
     <question id="17" quest="Uranus est la planète:" just="1">
         <reponse r="la plus froide"/>
-        <reponse r="la plus éloigné du soleil dans le Système Solaire"/>
+        <reponse r="la plus éloignée du Soleil dans le Système Solaire"/>
         <reponse r="la plus drôle"/>
         <reponse r="la plus grande"/>
     </question>
@@ -112,6 +112,6 @@
         <reponse r="Toutes"/>
         <reponse r="1 an sur Neptune dure 165 ans sur la Terre"/>
         <reponse r="L’origine de la couleur bleue de Neptune n’est toujours pas expliquée"/>
-        <reponse r="C’est la planète la plus éloignée du Soleil dans le Système Solaire "/>
+        <reponse r="C’est la planète la plus éloignée du Soleil dans le Système Solaire"/>
     </question>
 </quizz>
