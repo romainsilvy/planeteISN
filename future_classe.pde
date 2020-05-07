@@ -86,7 +86,7 @@ void systeme() {
   image(neptune, xNe, yNe, rNe, rNe);
   calculPosition();
   fill(20,20,40);
-    rect(t-10,0,t,height);
+  rect(t-10,0,width*0.25,height - 10);
   informations();
   fill(15,15,30);
   rect(width*0.755,height*0.9,width*0.235,height*0.08,5);

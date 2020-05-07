@@ -280,6 +280,6 @@ void informations()
     textSize(35);
     text("Le Système Solaire:", t+20, 55);
     textSize(15);
-    text(intro_s, t,80);
+    text(intro_s, t,80, width*0.25, height - 10); // on affiche les infos du systeme solaire dans le cardre
   }
 }

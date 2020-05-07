@@ -46,9 +46,9 @@ void intro_quizz() {
     }
   rectMode(CENTER);
   fill(30, 30, 30);
-  rect(width*0.5, height*0.57, width*0.81, height*0.55);
+  rect(width*0.5, height*0.52, width*0.81, height*0.55);
   fill(255);
-  text("Bienvenue dans le quizz sur le Système Solaire ! Ici vous allez pouvoir tester vos connaisances sur le Système Solaire et ses planètes. \n Il est fortement conseillé de consulter attentivement l'animation sur le Système Solaire avant de commencer le quizz, car une fois le quizz commencé, aucun retour en arrière ne sera possible ! \n\n ATTENTION ! Il n'y a qu'une seule réponse juste par question.", width*0.5, height*0.7, width*0.8, height*0.8);
+  text("Bienvenue dans le quizz sur le Système Solaire ! Ici vous allez pouvoir tester vos connaisances sur le Système Solaire et ses planètes. \n Il est fortement conseillé de consulter attentivement l'animation sur le Système Solaire avant de commencer le quizz, car une fois le quizz commencé, aucun retour en arrière ne sera possible ! \n\n ATTENTION ! Il n'y a qu'une seule réponse juste par question.", width*0.5, height*0.65, width*0.8, height*0.8);
   rectMode(CORNER);
 }
 
