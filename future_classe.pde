@@ -86,7 +86,7 @@ void systeme() {
   image(neptune, xNe, yNe, rNe, rNe);
   calculPosition();
   fill(20,20,40);
-  rect(t-10,0,width*0.25,height - 10);
+  rect(width*0.745,0,width*0.25,height - 10);
   informations();
   fill(15,15,30);
   rect(width*0.755,height*0.9,width*0.235,height*0.08,5);
@@ -94,12 +94,14 @@ void systeme() {
   textSize(0.022*width);
   text("accès au quizz >>",width*0.775,height*0.95);
   textSize(20);
+  noStroke();
   if ((mousePressed == true) && (mouseX > width*0.755) && (mouseX < width*0.755+width*0.235) && (mouseY < height*0.9+height*0.08) && (mouseY > height*0.9)) page = "quizz";
  } 
 
 
 void chargement_image(){
   fond = loadImage("spacestarblue.jpg");
+  fleche = loadImage("fleche.png");
   soleil = loadImage("soleil.png");
   mercure = loadImage("mercure.png");
   venus = loadImage("venus.png");
@@ -114,7 +116,7 @@ void chargement_image(){
 
 
 void mise_echelle(){
- xS = width*0.36;
+    xS = width*0.36;
     yS = height*0.5;
     eMe = width*0.08; 
     eVe = width*0.11;
@@ -132,5 +134,4 @@ void mise_echelle(){
     Sa = eSa*0.5;
     Ur = eUr*0.5;
     Ne = eNe*0.5;
-    t = width*0.75;
 }
