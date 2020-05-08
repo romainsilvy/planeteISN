@@ -80,7 +80,7 @@ class Quizz {           // début class Quizz
   void testReponse(){ // on teste si on clique sur un carré pour sélectionner une réponse
     if (mousePressed == true) {
       for(int i = 0; i < 4; i++){ // pour toutes les cases
-        if((mouseX > width*0.5) && (mouseX < width*0.5 + width*0.81) && (mouseY > height*(0.42+ (i * 0.10))) && (mouseY < height*(0.42 + (i * 0.10)) + height*0.07)){
+        if((mouseX > width*0.095) && (mouseX < width*0.095 + width*0.81) && (mouseY > height*(0.38 + (i * 0.10))) && (mouseY < height*(0.38 + (i * 0.10)) + height*0.07)){
           rd = i + 1;
         }
       }
