@@ -6,8 +6,6 @@
 * mise_echelle(): calcul les positions/distance pour que ça rentre dans l'écran
 */
 
-
-
 void calculPosition()
 {
   // Mercure
@@ -93,27 +91,9 @@ void systeme() {
   fill(250);
   textSize(0.022*width);
   text("accès au quizz >>",width*0.775,height*0.95);
-  textSize(20);
   noStroke();
   if ((mousePressed == true) && (mouseX > width*0.755) && (mouseX < width*0.755+width*0.235) && (mouseY < height*0.9+height*0.08) && (mouseY > height*0.9)) page = "quizz";
  } 
-
-
-void chargement_image(){
-  fond = loadImage("spacestarblue.jpg");
-  fleche = loadImage("fleche.png");
-  soleil = loadImage("soleil.png");
-  mercure = loadImage("mercure.png");
-  venus = loadImage("venus.png");
-  terre = loadImage("terre.png");
-  mars = loadImage("mars.png");
-  jupiter = loadImage("jupiter.png");
-  saturne = loadImage("saturne.png");
-  uranus = loadImage("uranus.png");
-  neptune = loadImage("neptune.png");
-}
-
-
 
 void mise_echelle(){
     xS = width*0.36;
