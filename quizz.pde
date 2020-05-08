@@ -15,20 +15,22 @@ void load_quizz(){
   }
 }
 
-// juste la porte d'entrée (d'introduction) vers les differentes pages du quizz
-// est toujours appele quand on est dans la page quizz
+
+
+// lien entre les differentes pages du quizz
+// est toujours appele pendant le quizz
 void quizz() { 
   background(35);
   image(fond, 512, 384);
-  switch(etat_quizz) { // suivant les differents etat ou l'on est dans le quizz
+  switch(etat_quizz) { // suivant les differentes positions dans le quizz
   case 1:
-    intro_quizz(); // soit a l'introdution
+    intro_quizz(); // a l'introdution
     break;
   case 2:
-    in_quizz(); // soit devant les questions
+    in_quizz(); // devant les questions
     break;
   case 3:
-    fin_quizz(); // soit a la fin pour voir les points
+    fin_quizz(); // a la fin pour voir les points
     break;
   }
 }
@@ -51,13 +53,13 @@ void intro_quizz() {
   textSize(0.0235*width);
   text("Bienvenue dans le quizz sur le Système Solaire ! Ici vous allez pouvoir tester vos connaisances sur le Système Solaire et ses planètes. \n Il est fortement conseillé de consulter attentivement l'animation sur le Système Solaire avant de commencer le quizz, car une fois le quizz commencé, aucun retour en arrière ne sera possible ! \n\n ATTENTION ! Il n'y a qu'une seule réponse juste par question.", width*0.5, height*0.65, width*0.8, height*0.8);
  
-  if (mousePressed && mouseX>width*0.8 && mouseX<width*0.905 && mouseY<height*0.92 && mouseY>height*0.85) { 
+  if (mousePressed && mouseX>width*0.8 && mouseX<width*0.905 && mouseY<height*0.92 && mouseY>height*0.85) {  //test bouton suivant sur l'intro du quizz
       etat_quizz = 2;
     }
   rectMode(CORNER); // on retourne en CORNER
 }
 
-// page de fin du quizz, on l'on affiche les points
+// page de fin du quizz, affichage des points
 void fin_quizz() {
   background(35);
   image(fond, 512, 384);
