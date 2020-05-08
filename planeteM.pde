@@ -18,7 +18,7 @@ String intro_s = "    Ceci est une représentation simplifiée de notre Système
 Quizz[] les_questions;
 int point = 0, nb_page = 0;
 int etat_quizz = 1; // pour savoir si on est à la page d'accueil, au milieu ou à la fin
-int current_question = 0; // le numéro de la question actuelle du quizz
+int current_question = int(random(0, 19)); // le numéro de la question actuelle du quizz on prend un nombre au hasard
 
 //float Me = 16, Ve = 21, Te = 27, Ma = 33, Ju = 45, Sa = 56, Ur = 70, Ne = 75;
 

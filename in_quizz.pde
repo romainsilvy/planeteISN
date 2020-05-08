@@ -1,12 +1,15 @@
+
+// fonction appeler durant la page ou l'on choisi les reponses
 void in_quizz(){
   background(35);
   image(fond, 512, 384);
+  
   fill(250);
-  if(les_questions[current_question].affiche() == true){
+  if(les_questions[current_question].affiche() == true){ //quand la fonction pour afficher la question actuel renvoie true ca veut dire qu'il faut changer la question actuel
     // donc on change le question qui est affichée
     current_question = int(random(0, 19));
   }
-  if (nb_page >= 11){ 
+  if (nb_page >= 11){ // des qu'on arrive a 11 on termine le quizz et on passe sur la page de fin
     etat_quizz = 3;
   }
 }
@@ -30,32 +33,31 @@ class Quizz {           // début class Quizz
 
     //rectangle de fond
     fill(30, 30, 30);
-    rect(width*0.5, height*0.25, width*0.81, height*0.07);  //question
-    rect(width*0.5, height*0.42, width*0.81, height*0.07);  //r1
-    rect(width*0.5, height*0.52, width*0.81, height*0.07);  //r2
-    rect(width*0.5, height*0.62, width*0.81, height*0.07);  //r3
-    rect(width*0.5, height*0.72, width*0.81, height*0.07);  //r4
+    rect(width*0.5, height*0.25, width*0.81, height*0.07);  // fond de la question
+    
+    // boucle pour les rctangles de fond des reponse, cela change dynamiquement suivant la reponse mise
+    for(int i = 0; i < 4; i++){
+      if(rd == i + 1){ // si c'est la réponse sélectionnée
+        fill(255, 0, 0); // en rouge
+      }else{
+        fill(30, 30, 30); // sinon en gris
+      }
+      rect(width*0.5, height*(0.42+(i*0.10)), width*0.81, height*0.07);// le rectangle pour une reponse (position relative a la question de la boucle)
+    }
 
     //texte dans rectangle
     textSize(0.020*width);
     fill(255);
     textAlign(CENTER, CENTER);
     text(q, width*0.5, height*0.245, width*0.8, height*0.07); // la question
+    // boucle pour toutes les reponses possible
     for(int i = 0; i < 4; i++){
       text(r[i], width*0.5, height*(0.42 + (i * 0.10)), width*0.8, height*0.07); // les réponses
     }
 
-    //case à cocher interactive
+    
     rectMode(CORNER);
-    for(int i = 0; i < 4; i++){
-      if(rd == i + 1){ // si c'est la réponse sélectionnée
-        fill(255, 0, 0); // en rouge
-      }else{
-        fill(255); // sinon en blanc
-      }
-      rect(width*0.05, height*(0.4075+ (i * 0.10)), height*0.025, height*0.025); // le rectangle
-    }
-    testReponse(); // teste si on clique sur les petites cases et les mets a jour
+    testReponse(); // test si on clique sur les question et les mets a jour
     
     
     // ________________ BOUTON SUIVANT_________________//
@@ -78,7 +80,7 @@ class Quizz {           // début class Quizz
   void testReponse(){ // on teste si on clique sur un carré pour sélectionner une réponse
     if (mousePressed == true) {
       for(int i = 0; i < 4; i++){ // pour toutes les cases
-        if((mouseX > width*0.05) && (mouseX < width*0.05 + height*0.025) && (mouseY > height*(0.4075+ ((i - 1) * 0.10))) && (mouseY > height*(0.4075+ ((i - 1) * 0.10)) + height*0.025)){
+        if((mouseX > width*0.5) && (mouseX < width*0.5 + width*0.81) && (mouseY > height*(0.42+ (i * 0.10))) && (mouseY < height*(0.42 + (i * 0.10)) + height*0.07)){
           rd = i + 1;
         }
       }
