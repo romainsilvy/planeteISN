@@ -25,7 +25,7 @@ class Quizz {           // début class Quizz
       }else{
         fill(30, 30, 30); // sinon en gris
       }
-      rect(width*0.5, height*(0.42+(i*0.10)), width*0.81, height*0.07);// le rectangle pour une reponse (position relative a la question de la boucle)
+      rect(width*0.5, height*(0.42+(i*0.10)), width*0.81, height*0.07,  height*0.033);// le rectangle pour une reponse (position relative a la question de la boucle)
     }
 
     //texte dans rectangle
@@ -35,6 +35,11 @@ class Quizz {           // début class Quizz
     text(q, width*0.5, height*0.245, width*0.8, height*0.07); // la question
     // boucle pour toutes les reponses possible
     for(int i = 0; i < 4; i++){
+      if(r[i].length() > 100){ // si c'est trop grand on met une police plus petite
+        textSize(0.012*width);
+      }else{
+        textSize(0.020*width);
+      }
       text(r[i], width*0.5, height*(0.42 + (i * 0.10)), width*0.8, height*0.07); // les réponses
     }
 
@@ -45,15 +50,18 @@ class Quizz {           // début class Quizz
     
     // ________________ BOUTON SUIVANT_________________//
     fill(30, 30, 30);
-    rect(width*0.8, height*0.85, width*0.105, height*0.07);
+    rect(width*0.8, height*0.85, width*0.105, height*0.07, height*0.033);
     fill(250);
     textAlign(LEFT, BASELINE);
+    textSize(0.020*width);
     text("suivant", width*0.81, height*0.9);  
     if ((mousePressed == true) && (mouseX > width*0.8) && (mouseX < width*0.905) && (mouseY < height*(0.85 + 0.07)) && (mouseY > height*0.85) && (rd != 0)){ // test du clic sur le bouton suivant
       nb_page = nb_page +1; // on ajoute 1 au nombre de pages de quizz visitées
       if(rd == c){
         point ++; // si la reponse est juste on augmente les points
       }
+      // pour le prochaine fois que l'on refait le quizz il faut que ce soit remis a 0
+      rd = 0;
       return true; // on renvoie true pour afficher une nouvelle question du quizz
     }
     
@@ -140,8 +148,19 @@ void fin_quizz() {
   image(fond, 512, 384);
   rectMode(CENTER);
   fill(30, 30, 30);
-  rect(width*0.5, height*0.57, width*0.81, height*0.55);
+  rect(width*0.5, height*0.45, width*0.81, height*0.45);
   fill(255);
-  text("Félicitations ! Vous avez réussi le quizz et avez obtenu un score de " + point + " points \nVous pouvez recommencer le quizz si vous souhaitez améliorer votre score ou simplement pour vous testez sur d'autres questions, mais pensez d'abord à aller voir l'animation sur le Système Solaire.", width*0.5, height*0.7, width*0.8, height*0.8);
+  String text_fin = "";
+  text_fin += "Félicitations ! Vous avez obtenu un score de " + point + " points \n";
+  if(point < 3){
+    text_fin += "Oula, c'est une catastrophe, vous ne connaissez rien sur le systeme solaire. allez sur notre magnifique animation pour en apprendre plus!!";
+  }else if(point < 6){
+    text_fin += "Ce score est tres moyen, nous sommes sur que vous pouvez faire mieux, et en apprendre plus sur notre systeme solaire, allez donc voir notre magnifique animation!!";
+  }else{
+    text_fin += "Wouah, c'est que vous etes bon, une grosse tete je presume, mais meme avec toutes ces connaissances j'en suis sur que vous pouvez en apprendre encore plus avec notre magnifique animation!!";
+  }
+  text_fin += "\nVous pouvez refaire de quizz avec de toutes nouvelles questions pour tester vos connaissances";
+  
+  text(text_fin, width*0.5, height*0.7, width*0.8, height*0.8);
   rectMode(CORNER);
 }
