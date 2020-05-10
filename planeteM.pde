@@ -1,3 +1,4 @@
+/*variables utilisées pour le systeme solaire*/
 float xS, yS, r = 100;                             //Soleil
 float xMe, yMe, rMe = 15;                          //Mercure
 float xVe, yVe, rVe = 25;                          //Venus
@@ -12,20 +13,25 @@ float eMe, eVe, eTe, eMa, eJu, eSa, eUr, eNe;      // rayons ellipses pour les o
 float vMe = 0.04, vVe = 0.03, vTe = 0.02, vMa = 0.01, vJu = 0.008, vSa = 0.005, vUr = 0.002, vNe = 0.001;    //vitesses
 float tetaMe = 0, tetaVe = 0, tetaTe = 0, tetaMa = 0, tetaJu = 0, tetaSa = 0, tetaUr = 0, tetaNe = 0;
 PImage fond, fleche, soleil, mercure, venus, terre, mars, jupiter, saturne, uranus, neptune;    //chargement de toutes les images des planetes
-String page;
 String texteSoleil, texteMercure, texteVenus, texteTerre, texteMars, texteJupiter, texteSaturne, texteUranus, texteNeptune, texteIntro;    //variables contenant les infos sur les planetes
+
+/*variables utilisées dans le quizz*/
 Quizz[] les_questions;
-int point = 0, nb_page = 0;
+int point = 0, nb_page = 0;  
 int etat_quizz = 1; // pour savoir si on est à la page d'accueil, au milieu ou à la fin
 int current_question = int(random(0, 19)); // le numéro de la question actuelle du quizz on prend un nombre au hasard
 
+String page;  //variable utilisée dans le switch
+
+/*taille des textes*/
+float size1, size2, size3, size4, size5, size6, size7;
 
 
 void setup() {
   fullScreen();
   imageMode(CENTER);
   ellipseMode(CENTER);
-  noStroke();
+  stroke(250);
  
   load_quizz();    //chargement des données pour le quizz
 
@@ -33,7 +39,7 @@ void setup() {
 
   mise_echelle();    //responsive pour toutes les valeurs
 
-  page = "accueil"; // pour arriver sur la page d'accueil
+  page = "accueil"; // pour arriver sur la page d'accueil au demmarage
 } 
 
 void draw() {
@@ -42,10 +48,10 @@ void draw() {
     case "accueil": // si on doit être à l'accueil on appelle la fonction accueil
       accueil();
       break;
-    case "systeme": // ...
+    case "systeme": // si on doit etre sur le systeme on appelle la fonction systeme
       systeme();
       break;
-    case "quizz": // ...
+    case "quizz": // si o ndoit etre sur le quizz on appelle la fonction quizz
       quizz();
       break;
   }
