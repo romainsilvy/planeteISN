@@ -27,3 +27,33 @@ void load_quizz(){
     les_questions[i] = new Quizz(question, reponse, check);  // on remplit le tableau de notre objet question
   }
 }
+
+void mise_echelle(){
+    xS = width*0.36;
+    yS = height*0.5;
+    eMe = width*0.08; 
+    eVe = width*0.11;
+    eTe = width*0.15;
+    eMa = width*0.2;
+    eJu = width*0.31;
+    eSa = width*0.41;
+    eUr = width*0.51;
+    eNe = width*0.55;
+    Me = eMe*0.5;
+    Ve = eVe*0.5;
+    Te = eTe*0.5;
+    Ma = eMa*0.5;
+    Ju = eJu*0.5;
+    Sa = eSa*0.5;
+    Ur = eUr*0.5;
+    Ne = eNe*0.5;
+    
+    size1 = 0.008*width;  //info planetes 
+    size2 = 0.012*width; //possibilité 2 quizz utilisée si le texte est trop long 
+    size3 = 0.020*width; //taille du texte par defaut pour les questions du quizz
+    size4 = 0.0235*width; //texte d'explication du quizz
+    size5 = 0.022*width; //texte utilisé dans future classe 
+    size6 = 0.025*width; // Texte moyen accueil et taille du texte affiché sur les planetes dans systeme et quizz
+    size7 = 0.062*width;// texte en tres gros accueil
+    
+}
