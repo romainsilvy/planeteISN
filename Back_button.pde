@@ -1,3 +1,5 @@
+/*procedure permettant l'affichage du bouton retour*/
+
 void affiche_back_button(){
   imageMode(CORNER);
   image(fleche, 0.015*width, 0.035*height, 0.05*width, 0.03*height);
