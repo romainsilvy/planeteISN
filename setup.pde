@@ -15,8 +15,7 @@
 void load_quizz(){
   XML file_quizz = loadXML("data_quizz.xml"); // on charge le fichier XML où sont toutes les données des questions
   XML[] all_questions = file_quizz.getChildren("question"); // on transforme ce fichier en tableau d'enfant XML, ce tableau contient donc toutes les questions avec leurs réponses
-   les_questions = new Quizz[all_questions.length];
-
+  les_questions = new Quizz[all_questions.length];
   for(int i = 0;i < all_questions.length ;i++){ // pour toutes les questions 
     String question = all_questions[i].getString("quest"); // on récupère la question
     int check = all_questions[i].getInt("just"); //           on récupère le check pour savoir quelle réponse est juste

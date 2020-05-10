@@ -3,12 +3,14 @@ class Quizz {           // début class Quizz
   String[] r;
   int c;
   int rd;
+  boolean dejaRepondu;
   
   Quizz (String question, String[] reponse, int check){
     q = question;
     r = reponse;
     c = check; // le numero de la reponse juste
     rd = 0; // reponse donne par l'utilisateur
+    dejaRepondu = false;
   }
   boolean affiche(){
     textAlign(LEFT, CENTER);
@@ -18,7 +20,7 @@ class Quizz {           // début class Quizz
     fill(30, 30, 30);
     rect(width*0.5, height*0.25, width*0.81, height*0.07);  // fond de la question
     
-    // boucle pour les rctangles de fond des reponse, cela change dynamiquement suivant la reponse mise
+    // boucle pour les rectangles de fond des reponse, cela change dynamiquement suivant la reponse mise
     for(int i = 0; i < 4; i++){
       if(rd == i + 1){ // si c'est la réponse sélectionnée
         fill(255, 0, 0); // en rouge
@@ -62,10 +64,17 @@ class Quizz {           // début class Quizz
       }
       // pour le prochaine fois que l'on refait le quizz il faut que ce soit remis a 0
       rd = 0;
+      
+      dejaRepondu = true;
+      
       return true; // on renvoie true pour afficher une nouvelle question du quizz
     }
     
     return false; // si on n'appuie pas en revoie false qui n'active rien
+  }
+  
+  boolean isRepondu(){
+    return dejaRepondu;
   }
   
   void testReponse(){ // on teste si on clique sur un carré pour sélectionner une réponse
@@ -133,10 +142,12 @@ void in_quizz(){
   
   fill(250);
   if(les_questions[current_question].affiche() == true){ //quand la fonction pour afficher la question actuel renvoie true ca veut dire qu'il faut changer la question actuel
-    // donc on change le question qui est affichée
-    current_question = int(random(0, 19));
+    do{
+      // donc on change le question qui est affichée
+      current_question = int(random(0, 18));
+    }while(les_questions[current_question].isRepondu() == true); // si la question choisi au hasard est deja repondu on en choisi une autre
   }
-  if (nb_page >= 11){ // des qu'on arrive a 11 on termine le quizz et on passe sur la page de fin
+  if (nb_page >= 10){ // des qu'on arrive a 11 on termine le quizz et on passe sur la page de fin
     etat_quizz = 3;
   }
 }
