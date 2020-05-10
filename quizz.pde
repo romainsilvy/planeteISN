@@ -18,29 +18,29 @@ class Quizz {           // début class Quizz
 
     //rectangle de fond
     fill(30, 30, 30);
-    rect(width*0.5, height*0.25, width*0.81, height*0.07);  // fond de la question
+    rect(width*0.5, height*0.25, width*0.81, height*0.07, height*0.025);  // fond de la question
     
-    // boucle pour les rectangles de fond des reponse, cela change dynamiquement suivant la reponse mise
+    // boucle pour les rctangles de fond des reponse, cela change dynamiquement suivant la reponse mise
     for(int i = 0; i < 4; i++){
       if(rd == i + 1){ // si c'est la réponse sélectionnée
         fill(255, 0, 0); // en rouge
       }else{
         fill(30, 30, 30); // sinon en gris
       }
-      rect(width*0.5, height*(0.42+(i*0.10)), width*0.81, height*0.07,  height*0.033);// le rectangle pour une reponse (position relative a la question de la boucle)
+      rect(width*0.5, height*(0.42+(i*0.10)), width*0.81, height*0.07, height*0.025);// le rectangle pour une reponse (position relative a la question de la boucle)
     }
 
     //texte dans rectangle
-    textSize(0.020*width);
+    textSize(size3);
     fill(255);
     textAlign(CENTER, CENTER);
     text(q, width*0.5, height*0.245, width*0.8, height*0.07); // la question
     // boucle pour toutes les reponses possible
     for(int i = 0; i < 4; i++){
       if(r[i].length() > 100){ // si c'est trop grand on met une police plus petite
-        textSize(0.012*width);
+        textSize(size2);
       }else{
-        textSize(0.020*width);
+        textSize(size3);
       }
       text(r[i], width*0.5, height*(0.42 + (i * 0.10)), width*0.8, height*0.07); // les réponses
     }
@@ -52,10 +52,10 @@ class Quizz {           // début class Quizz
     
     // ________________ BOUTON SUIVANT_________________//
     fill(30, 30, 30);
-    rect(width*0.8, height*0.85, width*0.105, height*0.07, height*0.033);
+    rect(width*0.8, height*0.85, width*0.105, height*0.07, height*0.025);
     fill(250);
     textAlign(LEFT, BASELINE);
-    textSize(0.020*width);
+    textSize(size3);
     text("suivant", width*0.81, height*0.9);  
     if ((mousePressed == true) && (mouseX > width*0.8) && (mouseX < width*0.905) && (mouseY < height*(0.85 + 0.07)) && (mouseY > height*0.85) && (rd != 0)){ // test du clic sur le bouton suivant
       nb_page = nb_page +1; // on ajoute 1 au nombre de pages de quizz visitées
@@ -115,17 +115,17 @@ void intro_quizz() {
   
   // tous les rectangles de fond
   fill(30, 30, 30);
-  rect(width*0.09, height*0.15, width*0.13, height*0.07); // fond "le Quizz"
-  rect(width*0.8, height*0.85, width*0.105, height*0.07); // fond "suivant"
+  rect(width*0.09, height*0.15, width*0.13, height*0.07, height*0.025); // fond "le Quizz"
+  rect(width*0.8, height*0.85, width*0.105, height*0.07, height*0.025); // fond "suivant"
   rectMode(CENTER);
-  rect(width*0.5, height*0.52, width*0.81, height*0.55); // fond texte central
+  rect(width*0.5, height*0.52, width*0.81, height*0.55, height*0.025); // fond texte central
   
   // tous les textes
   fill(250);
-  textSize(0.025*width);
+  textSize(size6);
   text("Le Quizz", width*0.1, height*0.2);
   text("suivant", width*0.81, height*0.9);
-  textSize(0.0235*width);
+  textSize(size4);
   text("Bienvenue dans le quizz sur le Système Solaire ! Ici vous allez pouvoir tester vos connaisances sur le Système Solaire et ses planètes. \n Il est fortement conseillé de consulter attentivement l'animation sur le Système Solaire avant de commencer le quizz, car une fois le quizz commencé, aucun retour en arrière ne sera possible ! \n\n ATTENTION ! Il n'y a qu'une seule réponse juste par question.", width*0.5, height*0.65, width*0.8, height*0.8);
  
   if (mousePressed && mouseX>width*0.8 && mouseX<width*0.905 && mouseY<height*0.92 && mouseY>height*0.85) {  //test bouton suivant sur l'intro du quizz
@@ -159,7 +159,7 @@ void fin_quizz() {
   image(fond, 512, 384);
   rectMode(CENTER);
   fill(30, 30, 30);
-  rect(width*0.5, height*0.45, width*0.81, height*0.45);
+  rect(width*0.5, height*0.45, width*0.81, height*0.45, height*0.025);
   fill(255);
   String text_fin = "";
   text_fin += "Félicitations ! Vous avez obtenu un score de " + point + " points \n";
