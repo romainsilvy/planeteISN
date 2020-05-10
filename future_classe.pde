@@ -3,7 +3,6 @@
 * calculPosition(): met à jour les coordonnées des planètes
 * system(): toute la partie pour afficher le système solaire
 * chargement_image(): charge les images dans les variables
-* mise_echelle(): calcul les positions/distance pour que ça rentre dans l'écran
 */
 
 void calculPosition()
@@ -83,35 +82,15 @@ void systeme() {
   ellipse(xS, yS, eNe+200, eNe);
   image(neptune, xNe, yNe, rNe, rNe);
   calculPosition();
-  fill(20,20,40);
-  rect(width*0.745,0,width*0.25,height - 10);
+  fill(30);
+  rect(width*0.745,0,width*0.25,height*0.995, height*0.025);  //rectangle de fond pour les infos 
   informations();
-  fill(15,15,30);
-  rect(width*0.755,height*0.9,width*0.235,height*0.08,5);
+  
+  //bouton d'acces au quizz
+  fill(30);
+  rect(width*0.755, height*0.9, width*0.235, height*0.08, height*0.025);
   fill(250);
-  textSize(0.022*width);
+  textSize(size5);
   text("accès au quizz >>",width*0.775,height*0.95);
-  noStroke();
   if ((mousePressed == true) && (mouseX > width*0.755) && (mouseX < width*0.755+width*0.235) && (mouseY < height*0.9+height*0.08) && (mouseY > height*0.9)) page = "quizz";
  } 
-
-void mise_echelle(){
-    xS = width*0.36;
-    yS = height*0.5;
-    eMe = width*0.08; 
-    eVe = width*0.11;
-    eTe = width*0.15;
-    eMa = width*0.2;
-    eJu = width*0.31;
-    eSa = width*0.41;
-    eUr = width*0.51;
-    eNe = width*0.55;
-    Me = eMe*0.5;
-    Ve = eVe*0.5;
-    Te = eTe*0.5;
-    Ma = eMa*0.5;
-    Ju = eJu*0.5;
-    Sa = eSa*0.5;
-    Ur = eUr*0.5;
-    Ne = eNe*0.5;
-}
